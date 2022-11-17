@@ -1,5 +1,10 @@
 const Button = props => {
-  return <button type="button"> {props.children}</button>;
+  return (
+    <button className="btn" type="button">
+      {' '}
+      {props.children}
+    </button>
+  );
 };
 
 export default Button;

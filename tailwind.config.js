@@ -35,6 +35,8 @@ module.exports = {
         proxi: ['Proxima Nova', 'sans-serif'],
         robot: ['Roboto', 'sans-serif'],
       },
+
+      padding: {},
     },
   },
   plugins: [],

@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .card {
+    background-color: theme('colors.cardBodyColor');
+    border-radius: theme('borderRadius.rad8');
+    padding: 16px 24px;
+    box-shadow: theme('boxShadow.cardShadow');
+  }
+
+  .btn {
+    padding: 18px 30px;
+    border-radius: theme('borderRadius.rad8');
+    min-whidth: 127px;
+    background-color: theme('colors.blue50');
+    color: theme('colors.cardBodyColor');
+  }
+}
