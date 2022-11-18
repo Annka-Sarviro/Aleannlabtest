@@ -5,7 +5,7 @@ function JobCard({ job }) {
   const location = useLocation();
   const days = getDays(job.createdAt);
   return (
-    <li className="card" key={job.id}>
+    <li className="card mb-2 " key={job.id}>
       <NavLink to={`/${job.id}`} state={{ from: location }}>
         <img src={job.pictures[0]} alt="movie.title" width={85} height={85} />
         <h2>{job.title}</h2>
