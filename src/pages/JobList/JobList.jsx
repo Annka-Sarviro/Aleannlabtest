@@ -19,8 +19,8 @@ function JobList() {
   }, []);
 
   return (
-    <div className="">
-      <h1 className="text-color-bodyColor ">All jobs</h1>
+    <div className="mx-[auto] p-5">
+      <h1 className="hidden ">All jobs</h1>
       <List jobs={jobs} />
       <Pagination jobs={jobs} />
     </div>

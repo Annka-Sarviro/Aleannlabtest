@@ -6,7 +6,7 @@ function List({ jobs }) {
     return;
   }
   return (
-    <ul>
+    <ul className="mx-[auto] max-w-[1400px]">
       {jobs.map(job => {
         return <JobCard job={job} key={job.id} />;
       })}
