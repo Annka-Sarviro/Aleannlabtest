@@ -1,49 +1,42 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import ReactPaginate from 'react-paginate';
-import List from '../../pages/List/List';
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 
-const Pagination = ({ jobs }) => {
-  const [currentItems, setCurrentItems] = useState(null);
-  const [pageCount, setPageCount] = useState(0);
-  const [itemOffset, setItemOffset] = useState(0);
-  const itemsPerPage = 6;
-
-  useEffect(() => {
-    const endOffset = itemOffset + itemsPerPage;
-
-    setCurrentItems(jobs.slice(itemOffset, endOffset));
-    setPageCount(Math.ceil(jobs.length / itemsPerPage));
-  }, [itemOffset, itemsPerPage, jobs]);
-
-  const handlePageClick = event => {
-    const newOffset = (event.selected * itemsPerPage) % jobs.length;
-    setItemOffset(newOffset);
-  };
-
+const Pagination = ({ onPageChange, pageCount }) => {
   return (
     <>
-      <List jobs={currentItems} />
       <ReactPaginate
         breakLabel="..."
-        nextLabel="next >"
-        onPageChange={handlePageClick}
+        nextLabel={
+          <ChevronRightIcon
+            className="chevronIcon w-8 h-8 ml-8 fill-[#979797]"
+            aria-hidden="true"
+          />
+        }
+        onPageChange={onPageChange}
         pageRangeDisplayed={5}
+        marginPagesDisplayed={1}
         pageCount={pageCount}
-        previousLabel="< previous"
+        previousLabel={
+          <ChevronLeftIcon
+            className="chevronIcon w-8 h-8 mr-8 fill-[#979797]"
+            aria-hidden="true"
+          />
+        }
         renderOnZeroPageCount={null}
-        containerClassName="pagination"
-        pageClassName="page-num"
-        previousLinkClassName="page-num"
-        nextClassName="page-num"
-        activeLinkClassName="active"
+        pageClassName="page-item"
+        pageLinkClassName="page-link "
+        previousClassName="page-item"
+        previousLinkClassName="page-link "
+        nextClassName="page-item"
+        nextLinkClassName="page-link "
+        breakClassName="page-item"
+        breakLinkClassName="page-link "
+        containerClassName="pagination  "
+        activeClassName="active "
       />
     </>
   );
 };
-
-// ReactDOM.render(
-//   <PaginatedItems itemsPerPage={4} />,
-//   document.getElementById('container')
-// );
 
 export default Pagination;

@@ -3,18 +3,30 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
+      screens: {
+        mobile: '420px',
+        tablet: '640px',
+        desctop: '1400px',
+      },
       colors: {
         bodyColor: '#E6E9F2',
         cardBodyColor: '#FFF',
-        blue100: '338415D',
-        blue80: '#3A4562',
-        blue50: '#384564',
-        blue30: '#878D9D',
-        lightblue100: '#5876C5',
-        lightblue80: '#55699E',
-        lightblue50: '#A1B1DB',
-        yellow100: '#988B49',
-        yellow50: '#FFFAE2',
+        blue: {
+          100: '338415D',
+          80: '#3A4562',
+          50: '#384564',
+          30: '#878D9D',
+        },
+        lightblue: {
+          100: '#5876C5',
+          80: '#55699E',
+          50: '#A1B1DB',
+        },
+
+        yellow: {
+          100: '#988B49',
+          50: '#FFFAE2',
+        },
       },
 
       boxShadow: {

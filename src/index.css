@@ -2,11 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@tailwind utilities {
+}
+
 @layer components {
   .card {
-    background-color: theme('colors.cardBodyColor');
+    background-color: #eff0f5;
     border-radius: theme('borderRadius.rad8');
     padding: 16px 24px;
+    padding-top: 44px;
     box-shadow: theme('boxShadow.cardShadow');
   }
 
@@ -14,7 +18,28 @@
     padding: 18px 30px;
     border-radius: theme('borderRadius.rad8');
     min-whidth: 127px;
-    background-color: theme('colors.blue50');
+    background-color: theme('colors.blue.50');
     color: theme('colors.cardBodyColor');
   }
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  width: 515px;
+  padding: 12px 17px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 48px;
+  border-radius: theme('borderRadius.rad8');
+  box-shadow: theme('boxShadow.cardShadow');
+}
+
+.page-item {
+  font-size: 20px;
+  margin: 0 10px;
+  color: theme('colors.blue.80');
+  font-weight: 600;
 }
