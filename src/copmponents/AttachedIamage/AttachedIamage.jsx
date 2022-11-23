@@ -9,11 +9,9 @@ const AttachedIamage = ({ job }) => {
           return (
             <li key={index}>
               <img
-                className="h-28 w-52 my-4 rounded-lg object-cover max-[767px]:[&:nth-child(3)]:hidden"
+                className="h-28 w-52 desctop:w-56  desctop:h-30 my-4 rounded-lg object-cover max-[767px]:[&:nth-child(3)]:hidden"
                 src={link}
                 alt={job.name}
-                width={209}
-                height={115}
               />
             </li>
           );

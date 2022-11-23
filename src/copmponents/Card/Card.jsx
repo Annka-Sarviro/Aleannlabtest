@@ -12,24 +12,26 @@ const Card = ({ job }) => {
 
   return (
     <div>
-      <div className="mb-[135px]">
-        <Button className="max-desctop:hidden">Apply now</Button>
-        <div className="flex mb-[32px]">
-          <p className="flex mr-4">
-            <StarIcon className="stroke-blue-80 w-5 h-5 inline stroke-2 mr-3 desctop:hidden desctop:w-6 desctop:h-6" />
-            <BookmarkIcon className="stroke-blue-80 w-5 h-5 hidden mr-4 stroke-2 desctop:inline desctop:w-6 desctop:h-6" />
-            <span className="flex text-blur-80 text-base ">
-              Save to my list
-            </span>
-          </p>
+      <div className="mb-[135px] desctop:mb-[86px]">
+        <div className="flex mb-[32px] items-center justify-between">
+          <Button className="max-desctop:hidden">Apply now</Button>
+          <div className="flex">
+            <p className="flex mr-4">
+              <StarIcon className="stroke-blue-80 w-5 h-5 inline stroke-2 mr-3 desctop:hidden desctop:w-6 desctop:h-6" />
+              <BookmarkIcon className="stroke-blue-80 w-5 h-5 hidden mr-4 stroke-2 desctop:inline desctop:w-6 desctop:h-6" />
+              <span className="flex text-blue-80 text-base ">
+                Save to my list
+              </span>
+            </p>
 
-          <p className="flex ">
-            <ShareIcon className="stroke-blue-80 w-5 h-5 inline stroke-2 mr-3 desctop:w-6 desctop:h-6" />
-            <span className="flex text-blur-80 text-base ">Share</span>
-          </p>
+            <p className="flex ">
+              <ShareIcon className="stroke-blue-80 w-5 h-5 inline stroke-2 mr-3 desctop:w-6 desctop:h-6" />
+              <span className="flex text-blue-80 text-base ">Share</span>
+            </p>
+          </div>
         </div>
         <MainInfo job={job} />
-        <Button className="mb-40px mx-auto block">Apply now</Button>
+        <Button className=" mx-auto block desctop:ml-0">Apply now</Button>
       </div>
       <div className="flex flex-col-reverse desctop:flex-col">
         <Geolocation job={job} />

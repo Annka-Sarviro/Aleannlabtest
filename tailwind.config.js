@@ -12,7 +12,7 @@ module.exports = {
         cardBodyColor: '#E6E9F2',
         cardBodyColor: '#FFF',
         blue: {
-          100: '#338415D',
+          90: '#38415D',
           80: '#3A4562',
           50: '#384564',
           30: '#878D9D',
