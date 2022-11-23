@@ -7,6 +7,7 @@ import { StarIcon } from '@heroicons/react/24/solid';
 function JobCard({ job }) {
   const location = useLocation();
   const days = getDays(job.createdAt);
+
   return (
     <li
       className="card [&:not(:last-child)]:mb-2 font-proxi tablet:bg-cardBodyColor cursor-pointer "
@@ -42,7 +43,7 @@ function JobCard({ job }) {
           <div className="flex flex-raw ">
             <MapPinIcon className="w-5 h-6 mr-1 text-blue-30" />
             <p className="text-blue-30 text-base desctop:lg font-base mb-2  font-normaltracking-widest">
-              Sity
+              {job.address}
             </p>
           </div>
 
