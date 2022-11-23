@@ -8,7 +8,7 @@ import { NotFoundPage } from '../pages/NotFoundPage/NotFoundPage';
 
 function App() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div>Loading....</div>}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<JobList />} />
