@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { getJobById } from '../../services/api';
 import { useState, useEffect } from 'react';
-
+import Button from '../../copmponents/Button/Button';
 import Card from '../../copmponents/Card/Card';
 
 function DetailedJob() {
@@ -22,7 +22,11 @@ function DetailedJob() {
   }, [jobId]);
 
   return (
-    <Card job={job} />
+    <div className="mx-[auto] px-6 py-4 bg-cardBodyColor font-proxi">
+      <h1 className="text-blue-80 text-lg	font-bold	mb-[30px]	">Job Details</h1>
+      <Card job={job} />
+      <Button>RETURN TO JOB BOARD</Button>
+    </div>
     // <div>
     //   <h1>Job Details</h1>
     //   <Button />

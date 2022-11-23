@@ -1,6 +1,6 @@
 const Button = props => {
   return (
-    <button className="btn" type="button">
+    <button className={`btn ${props.className}`} type="button">
       {' '}
       {props.children}
     </button>

@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@tailwind utilities {
-}
-
 @layer components {
   .card {
     background-color: #eff0f5;
@@ -28,13 +25,19 @@
   align-items: center;
   justify-content: center;
   background-color: #fff;
-  width: 515px;
+
   padding: 12px 17px;
   margin-right: auto;
   margin-left: auto;
   margin-top: 48px;
   border-radius: theme('borderRadius.rad8');
   box-shadow: theme('boxShadow.cardShadow');
+}
+
+@media (min-width: 1000px) {
+  .pagination {
+    width: 515px;
+  }
 }
 
 .page-item {

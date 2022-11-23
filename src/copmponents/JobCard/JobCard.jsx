@@ -9,11 +9,11 @@ function JobCard({ job }) {
   const days = getDays(job.createdAt);
   return (
     <li
-      className="card mb-2  font-proxi tablet:bg-cardBodyColor cursor-pointer "
+      className="card [&:not(:last-child)]:mb-2 font-proxi tablet:bg-cardBodyColor cursor-pointer "
       key={job.id}
     >
       <NavLink
-        className="flex justify-between"
+        className="flex justify-between cursor-pointer"
         to={`/${job.id}`}
         state={{ from: location }}
       >
@@ -24,7 +24,7 @@ function JobCard({ job }) {
           width={85}
           height={85}
         />
-        <div className="w-[278px] tablet:w-[600px] desctop:w-[1240px] flex flex-col relative">
+        <div className="w-[278px] tablet:w-[600px] lg:w-[1000px] desctop:w-[1240px] flex flex-col relative">
           <div className="absolute max-desctop:top-[-25px] max-desctop:left-0 flex desctop:right-[220px] desctop:top-[40px]">
             <StarIcon className=" fill-blue-50  h-4 w-4" />
             <StarIcon className=" fill-blue-50  h-4 w-4" />

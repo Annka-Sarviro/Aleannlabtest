@@ -9,10 +9,10 @@ module.exports = {
         desctop: '1400px',
       },
       colors: {
-        bodyColor: '#E6E9F2',
+        cardBodyColor: '#E6E9F2',
         cardBodyColor: '#FFF',
         blue: {
-          100: '338415D',
+          100: '#338415D',
           80: '#3A4562',
           50: '#384564',
           30: '#878D9D',
@@ -20,12 +20,13 @@ module.exports = {
         lightblue: {
           100: '#5876C5',
           80: '#55699E',
-          50: '#A1B1DB',
+          50: '#DFE7FC',
         },
 
         yellow: {
           100: '#988B49',
           50: '#FFFAE2',
+          30: 'FFCF00',
         },
       },
 

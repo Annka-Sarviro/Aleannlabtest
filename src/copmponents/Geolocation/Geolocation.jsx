@@ -1,7 +1,6 @@
 const Geolocation = ({ job }) => {
-  console.log(job.location.lat);
   return (
-    <div>
+    <div className="bg-blue-100 rounded-rad8">
       <p>{job.name}</p>
       <p>{job.address}</p>
       <p>{job.phone}</p>
