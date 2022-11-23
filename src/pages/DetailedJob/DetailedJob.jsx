@@ -3,6 +3,7 @@ import { getJobById } from '../../services/api';
 import { useState, useEffect } from 'react';
 import Button from '../../copmponents/Button/Button';
 import Card from '../../copmponents/Card/Card';
+import { Link } from 'react-router-dom';
 
 function DetailedJob() {
   const { jobId } = useParams();
@@ -27,9 +28,11 @@ function DetailedJob() {
         {' '}
         <h1 className="text-blue-80 text-3xl	font-bold	mb-[30px]">Job Details</h1>
         <Card job={job} />
-        <Button className="bg-blue-30 text-blue-90 font-bold max-desctop:hidden">
-          RETURN TO JOB BOARD
-        </Button>
+        <Link to={'/'}>
+          <Button className="bg-blue-30 text-blue-90 font-bold max-desctop:hidden">
+            RETURN TO JOB BOARD
+          </Button>
+        </Link>
       </div>
     </div>
   );
